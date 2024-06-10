@@ -3,6 +3,7 @@
 // instantiate a LinearSieve with n = maxN.
 // pr = primes <= maxN in ascending order
 // lp[i] = smallest prime factor of i
+// based on cp-algorithms
 
 #include <bits/stdc++.h>
 

@@ -2,6 +2,7 @@
 // copy the MillerRabin class.
 // instantiate a MillerRabin,
 // use isPrime function to check for primality of n.
+// based on cp-algorithms
 
 #include <bits/stdc++.h>
 
