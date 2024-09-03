@@ -3,6 +3,7 @@
 // use the constructor to initiate the graph with n vertices.
 // use build to empty the graph and rebuild with the same n.
 // use addEdge to add edges and maxFlow to calculate flow.
+// restart the graph after each use.
 // based on cp-algorithms
 
 #include <bits/stdc++.h>
