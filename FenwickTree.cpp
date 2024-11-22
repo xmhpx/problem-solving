@@ -85,4 +85,3 @@ struct FenwickTree2D {
                 bit[i][j] += delta;
     }
 };
-
