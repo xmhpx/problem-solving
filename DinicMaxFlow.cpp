@@ -40,6 +40,7 @@ public:
     }
 
     void addEdge(int u, int v, int cap) {
+        if(cap < 0)swap(u, v), cap = -cap;
         int id = adj[u].size(), 
             rid = adj[v].size();
         adj[u].push_back({v, cap, 0, rid});
@@ -94,6 +95,21 @@ public:
         }
         return r;
     }
+
+    pair<int, int> minCutMaxFlow(int s, int t){
+        int f = maxFlow(s, t);
+        int c = 0;
+        for(int i = 0; i < n; i++){
+            if(dist[i] != -1){
+                for(auto e : adj[i]){
+                    if(dist[e.v] == -1){
+                        c += e.cap;
+                    }
+                }
+            }
+        }
+        return {c, f};
+    }
 };
 
 signed main(){
@@ -116,5 +132,6 @@ signed main(){
     cin >> s >> t;
 
     // max flow from s to t
-    cout << grph.maxFlow(s, t) << '\n';
+    auto u = grph.minCutMaxFlow(s, t);
+    cout << u.first << ' ' << u.second << '\n';
 }

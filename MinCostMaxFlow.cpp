@@ -3,8 +3,6 @@
 using namespace std;
 
 
-const int N = 111;
-
 struct edge
 {
     int y, c, w, f;
@@ -13,7 +11,7 @@ struct edge
 };
 
 vector<edge> e;
-vector<int> g[N];
+vector<int> g[maxN];
 
 int rem(int x)
 {
@@ -28,7 +26,11 @@ void add_edge(int x, int y, int c, int w)
     e.push_back(edge(x, 0, -w, 0));
 }
 
-int n, m, s, t, v;
+/*
+make sure to initiate s, t and v
+*/
+
+int s, t, v;
 
 pair<int, long long> MCMF()
 {

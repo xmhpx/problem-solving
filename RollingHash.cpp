@@ -14,6 +14,7 @@
 // hard code hashSize in MuliRollingHash class
 // initiate it with RandomRollingHash(string s)
 // use getHash, getRevHash, isEqual, isRevEqual and isPal.
+// every instance has its own random hashing parameters
 
 #include <bits/stdc++.h>
 
